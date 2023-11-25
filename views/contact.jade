@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  h1 Contact
+  if showThankYou
+    h1 Thank You!
+    p Your message has been sent successfully.
+  else
+    form.contact-form(method='post', action='/contact')
+        label Name
+        input(type='text', name='name', required)
+        label Email
+        input(type='email', name='email', required)
+        label Message
+        textarea(name='message', required)
+        button(type='submit') Send

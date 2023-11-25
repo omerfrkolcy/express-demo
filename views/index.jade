@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  section#introduction.intro-section
+    h1.title= title
+    p.intro-text I'm #{name}, a #{profession} specializing in #{specialization}.
+    p.intro-text If you have any questions or would like to discuss a potential project, please reach me via email at #{contact_method}.
+
+  section#project-details.project-section
+    h1.title Project Details (Tech Stack)
+    p.project-text This project is a server-side rendered application using 
+      strong Node.js, Express.js, and the Jade (Pug) template engine.
+    p.project-text The application serves dynamic web pages based on the route requested by the client.
+    p.project-text The styles are written in CSS and applied to the Jade templates to create a visually appealing user interface.
