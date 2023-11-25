@@ -10,15 +10,15 @@ const CONSTS = {
   github_link: 'https://github.com/omerfrkolcy',
 };
 const routes = [
-  { path: '/', view: 'index', title: 'Welcome' },
-  { path: '/about', view: 'about-me', title: 'About Me' },
-  { path: '/projects', view: 'projects', title: 'My Projects' },
-  { path: '/contact', view: 'contact', title: 'Contact Me' },
+  { path: '/', view: 'index', config: { title: 'Welcome' } },
+  { path: '/about', view: 'about-me', config: { title: 'About Me' } },
+  { path: '/projects', view: 'projects', config: { title: 'Projects' } },
+  { path: '/contact', view: 'contact', config: { title: 'Contact Me', showThankYou: false } },
 ];
 
 routes.forEach((route) => {
   router.get(route.path, (req, res) => {
-    res.render(route.view, Object.assign(CONSTS, { title: route.title }));
+    res.render(route.view, Object.assign(CONSTS, route.config));
   });
 });
 

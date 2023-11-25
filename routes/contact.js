@@ -21,6 +21,7 @@ router.post(
       const { message } = req.body;
 
       res.render('contact', {
+        title: 'Contact Me',
         showThankYou: true,
         name,
         email,
