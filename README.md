@@ -1,4 +1,4 @@
-# Portfolio Website
+# (SSR) Static Portfolio Website
 
 This is a portfolio website built with Node.js, Express.js, and Jade (Pug).
 
