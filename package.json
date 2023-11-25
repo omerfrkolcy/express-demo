@@ -4,12 +4,14 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "dev": "nodemon ./bin/www"
+    "dev": "nodemon ./bin/www",
+    "lint": "eslint \"./**/*.js\" --quiet",
+    "lint:full": "eslint \"./**/*.js\"",
+    "lint:fix": "eslint --fix './**/*.js'"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
-    "eslint": "^8.54.0",
     "express": "~4.16.1",
     "express-validator": "^7.0.1",
     "http-errors": "~1.6.3",
@@ -17,6 +19,9 @@
     "morgan": "~1.9.1"
   },
   "devDependencies": {
+    "eslint": "^8.54.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.29.0",
     "nodemon": "^3.0.1"
   }
 }

@@ -1,6 +1,6 @@
 const express = require('express');
-const router = express.Router();
 
+const router = express.Router();
 const CONSTS = {
   name: 'Ömer Faruk Olcay',
   profession: 'Software Engineer',
@@ -17,7 +17,7 @@ const routes = [
 ];
 
 routes.forEach((route) => {
-  router.get(route.path, function (req, res) {
+  router.get(route.path, (req, res) => {
     res.render(route.view, Object.assign(CONSTS, { title: route.title }));
   });
 });
