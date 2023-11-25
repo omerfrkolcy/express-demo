@@ -76,3 +76,4 @@ dist
 
 # DynamoDB Local files
 .dynamodb/
+.vercel

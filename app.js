@@ -20,7 +20,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/contact', contactRouter);
 
-app.use((req, res) => {
+app.use((_, res) => {
   res.status(404);
   res.render('error', { title: 'Oops! Page Not Found' });
 });
